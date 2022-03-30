@@ -1,4 +1,21 @@
 package org.base;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class AdactinExcel {
+	
+	public static void main(String[] args) {
+
+		WebDriver driver= new ChromeDriver();
+		driver.get("https://www.facebook.com/");
+		driver.manage().window().maximize();
+		String currentUrl = driver.getCurrentUrl();
+		System.out.println(currentUrl);
+		String title = driver.getTitle();
+		System.out.println(title);
+		
+	}
+	
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -6,6 +23,7 @@ import java.io.IOException;
 import java.math.BigDecimal;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+
 
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.CellType;
